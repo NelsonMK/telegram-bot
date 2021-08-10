@@ -47,6 +47,8 @@ bot.on('text', (ctx) => {
 					Object.entries(res.headers)[13][1]
 				}`
 			)
+
+			logger.info(ctx.message.chat.id)
 		})
 		.catch((error) => {
 			logger.log(error)
