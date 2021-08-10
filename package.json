@@ -7,8 +7,13 @@
 		"start": "node app.js",
 		"dev": "nodemon app.js"
 	},
-	"keywords": [],
-	"author": "",
+	"keywords": [
+		"telegram",
+		"bot",
+		"paraphrasing",
+		"rapidapi"
+	],
+	"author": "Nelson Muriithi",
 	"license": "ISC",
 	"repository": {
 		"type": "git",
@@ -24,5 +29,8 @@
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.12"
+	},
+	"engines": {
+		"node": "12.18.2"
 	}
 }
