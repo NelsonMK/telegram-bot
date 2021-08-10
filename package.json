@@ -1,0 +1,27 @@
+{
+	"name": "telegram-bot",
+	"version": "1.0.0",
+	"description": "Telegram bot for paraphrasing text",
+	"private": true,
+	"scripts": {
+		"start": "node app.js",
+		"dev": "nodemon app.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"repository": {
+		"url": ""
+	},
+	"dependencies": {
+		"axios": "^0.21.1",
+		"dotenv": "^10.0.0",
+		"joi": "^17.4.2",
+		"telegraf": "^4.4.1",
+		"telegraf-ratelimit": "^2.0.0",
+		"winston": "^3.3.3"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.12"
+	}
+}
