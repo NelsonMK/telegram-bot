@@ -51,7 +51,7 @@ bot.on('text', (ctx) => {
 				}`
 			)
 
-			logger.info(`${ctx.from.first_name} ${ctx.from.last_name}`)
+			logger.info(`${ctx.from.username}`)
 		})
 		.catch((error) => {
 			logger.log(error)
