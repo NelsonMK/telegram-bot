@@ -40,8 +40,8 @@ bot.on('text', (ctx) => {
 
 	axios
 		.request(options)
-		.then((res) => {
-			ctx.telegram.sendMessage(
+		.then(async (res) => {
+			await ctx.telegram.sendMessage(
 				ctx.message.chat.id,
 				`${res.data.rewrite}\n Remaining characters: ${
 					Object.entries(res.headers)[13][1]
@@ -49,7 +49,7 @@ bot.on('text', (ctx) => {
 			)
 		})
 		.catch((error) => {
-			console.log(error)
+			logger.log(error)
 		})
 })
 bot.launch()
