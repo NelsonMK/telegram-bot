@@ -1,8 +1,11 @@
+const express = require('express')
 const { Telegraf } = require('telegraf')
 const rateLimit = require('telegraf-ratelimit')
 const axios = require('axios').default
 const config = require('./config/config')
 const logger = require('./utils/logger')
+
+const app = express()
 
 const limit = {
 	window: 3000,
@@ -59,3 +62,7 @@ bot.launch()
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'))
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
+
+app.listen(config.port, () => {
+	logger.info(`Server running in ${config.env} mode on port ${config.port}`)
+})
