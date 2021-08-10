@@ -48,7 +48,7 @@ bot.on('text', (ctx) => {
 				}`
 			)
 
-			logger.info(ctx.message.chat.id)
+			logger.info(`${ctx.from.first_name} ${ctx.from.last_name}`)
 		})
 		.catch((error) => {
 			logger.log(error)
